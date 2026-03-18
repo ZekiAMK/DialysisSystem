@@ -27,7 +27,8 @@ Thumbs.db
 **/*.so
 
 # VS Code
-.vscode/
+.vscode/settings.json
+.vscode/*.log
 
 # OS
 .DS_Store
@@ -37,3 +38,16 @@ Thumbs.db
 #WAD Files important we don't share these
 *.wad
 *.WAD
+
+# dotenv files
+.env
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
