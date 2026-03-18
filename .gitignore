@@ -5,3 +5,35 @@ obj/
 *.suo
 .DS_Store
 Thumbs.db
+
+# .NET / MAUI
+**/bin/
+**/obj/
+*.user
+.vs/
+
+# Android / Gradle
+**/build/
+**/.gradle/
+**/local.properties
+**/*.apk
+**/*.aab
+**/.cxx/
+**/intermediates/
+
+# NDK
+**/*.o
+**/*.a
+**/*.so
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+#WAD Files important we don't share these
+*.wad
+*.WAD

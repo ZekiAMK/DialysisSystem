@@ -1,0 +1,9 @@
+{
+    "folders": [
+        { "name": "Native Source", "path": "native/app/jni/src" },
+        { "name": "MAUI App", "path": "mobile/MauiaApp" },
+        { "name": "Server", "path": "server" },
+        { "name": "Root", "path": "." }
+    ],
+    "settings": {}
+}
