@@ -6,7 +6,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{DAD03C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialysisServer", "server\DialysisServer\DialysisServer.csproj", "{A8DB13EB-6CC6-4F2E-FC78-F66E7EC65C79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mobile", "mobile\mobile.csproj", "{974B4BA5-A2CF-4D75-A4CB-F5D5953587C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialysisMobile", "mobile\DialysisMobile.csproj", "{974B4BA5-A2CF-4D75-A4CB-F5D5953587C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,9 +25,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{A8DB13EB-6CC6-4F2E-FC78-F66E7EC65C79} = {DAD03CFC-D5FA-AC94-41C7-9ABAB326F09E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4FFE7951-77D6-4A19-B02A-81046F1F3DB9}
