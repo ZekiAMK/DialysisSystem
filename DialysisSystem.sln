@@ -6,6 +6,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{DAD03C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialysisServer", "server\DialysisServer\DialysisServer.csproj", "{A8DB13EB-6CC6-4F2E-FC78-F66E7EC65C79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mobile", "mobile\mobile.csproj", "{974B4BA5-A2CF-4D75-A4CB-F5D5953587C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,10 @@ Global
 		{A8DB13EB-6CC6-4F2E-FC78-F66E7EC65C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8DB13EB-6CC6-4F2E-FC78-F66E7EC65C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8DB13EB-6CC6-4F2E-FC78-F66E7EC65C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974B4BA5-A2CF-4D75-A4CB-F5D5953587C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974B4BA5-A2CF-4D75-A4CB-F5D5953587C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974B4BA5-A2CF-4D75-A4CB-F5D5953587C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974B4BA5-A2CF-4D75-A4CB-F5D5953587C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
