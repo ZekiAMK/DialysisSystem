@@ -15,7 +15,7 @@ namespace DialysisServer.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.5");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.14");
 
             modelBuilder.Entity("DialysisServer.Models.SensorData", b =>
                 {
@@ -30,11 +30,15 @@ namespace DialysisServer.Migrations
                         .HasColumnType("REAL");
 
                     b.Property<DateTime>("Timestamp")
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.HasKey("Id");
 
-                    b.ToTable("SensorData", (string)null);
+                    b.HasIndex("Timestamp");
+
+                    b.ToTable("SensorData");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using DialysisServer.Data;
-using DialysisServer.Models;
 
 namespace DialysisServer.Controllers;
 
@@ -18,16 +17,6 @@ public class SensorController : ControllerBase
     [HttpPost]
     public IActionResult AddData()
     {
-        var data = new SensorData
-        {
-            Cadence = 90,
-            Speed = 30.2,
-            Timestamp = DateTime.Now
-        };
-
-        _context.SensorData.Add(data);
-        _context.SaveChanges();
-
-        return Ok("Saved");
+        return Ok("bruh");
     }
 }

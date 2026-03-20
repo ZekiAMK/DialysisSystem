@@ -19,12 +19,17 @@ namespace DialysisServer.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Cadence = table.Column<int>(type: "INTEGER", nullable: false),
                     Speed = table.Column<double>(type: "REAL", nullable: false),
-                    Timestamp = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    Timestamp = table.Column<DateTime>(type: "TEXT", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SensorData", x => x.Id);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SensorData_Timestamp",
+                table: "SensorData",
+                column: "Timestamp");
         }
 
         /// <inheritdoc />

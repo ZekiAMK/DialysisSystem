@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialysisServer", "DialysisS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Library", "Shared.Library\Shared.Library.csproj", "{AEE5FC47-0752-4659-9AC5-6E56EF11BEC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialysisServer.Tests", "DialysisServer.Tests\DialysisServer.Tests.csproj", "{25E3CD2F-407F-4ABD-B83E-86EE021E8511}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AEE5FC47-0752-4659-9AC5-6E56EF11BEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEE5FC47-0752-4659-9AC5-6E56EF11BEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEE5FC47-0752-4659-9AC5-6E56EF11BEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25E3CD2F-407F-4ABD-B83E-86EE021E8511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E3CD2F-407F-4ABD-B83E-86EE021E8511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E3CD2F-407F-4ABD-B83E-86EE021E8511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E3CD2F-407F-4ABD-B83E-86EE021E8511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

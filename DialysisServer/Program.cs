@@ -1,38 +1,42 @@
 using DialysisServer.Data;
-using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
-
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-                       ?? "Data Source=dialysis.sqlite";
-
-builder.Services.AddDbContextPool<AppDbContext>(options =>
+public partial class Program
 {
-    options.UseSqlite(connectionString);
-    if (builder.Environment.IsDevelopment())
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>());
+
+    private static void Main(string[] args)
     {
-        options.EnableSensitiveDataLogging();
+        var host = CreateHostBuilder(args).Build();
+        host.Run();
     }
-
-    // Use NoTracking by default for read-mostly queries; change per-query when updates are required
-    options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-});
-
-builder.Services.AddControllers();
-
-var app = builder.Build();
-
-// Ensure DB is created and migrations are applied at startup
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate();
 }
 
-app.UseHttpsRedirection();
+internal sealed class Startup
+{
+    private readonly IConfiguration _configuration;
+    private readonly IWebHostEnvironment _environment;
 
-app.MapGet("/", () => "Dialysis backend running");
+    public Startup(IConfiguration configuration, IWebHostEnvironment environment)
+    {
+        _configuration = configuration;
+        _environment = environment;
+    }
 
-app.MapControllers();
+    public void ConfigureServices(IServiceCollection services)
+    {
+        DatabaseConfig.ConfigureDatabaseServices(services, _configuration, _environment);
+        services.AddControllers();
+    }
 
-app.Run();
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+        app.UseHttpsRedirection();
+        app.UseRouting();
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
+    }
+}
