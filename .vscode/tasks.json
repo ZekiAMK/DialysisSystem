@@ -1,0 +1,63 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Native",
+            "type": "shell",
+            "command": ".\\gradlew.bat assembleDebug",
+            "options": {
+                "cwd": "${workspaceFolder}/DialysisMobile.Native"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Copy .so to MAUI",
+            "type": "shell",
+            "command": "xcopy /Y /S app\\build\\intermediates\\cmake\\debug\\obj\\* ..\\DialysisMobile\\Platforms\\Android\\libs\\",
+            "options": {
+                "cwd": "${workspaceFolder}/DialysisMobile.Native"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build Native and Copy",
+            "dependsOn": ["Build Native", "Copy .so to MAUI"],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run MAUI Android",
+            "type": "shell",
+            "command": "dotnet build -t:Run -f net9.0-android",
+            "options": {
+                "cwd": "${workspaceFolder}/DialysisMobile"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build All and Run MAUI",
+            "dependsOn": ["Build Native", "Copy .so to MAUI", "Run MAUI Android"],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

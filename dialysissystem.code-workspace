@@ -1,0 +1,9 @@
+{
+    "folders": [
+        { "name": "Native Source", "path": "DialysisMobile.Native/app/jni/src" },
+        { "name": "MAUI App", "path": "DialysisMobile" },
+        { "name": "Server", "path": "DialysisServer" },
+        { "name": "Root", "path": "." }
+    ],
+    "settings": {}
+}
