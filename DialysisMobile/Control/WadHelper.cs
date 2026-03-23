@@ -1,5 +1,5 @@
 // WadHelper.cs
-namespace MAUIAapp
+namespace mobile.Control
 {
     internal static class WadHelper
     {

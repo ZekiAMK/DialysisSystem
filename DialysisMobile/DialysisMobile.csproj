@@ -76,5 +76,13 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Shared.Library\Shared.Library.csproj" />
 	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
+		<AndroidJavaSource Include="Platforms\Android\Java\*.java" Bind="false" />
+		<AndroidNativeLibrary Include="Platforms\Android\libs\arm64-v8a\libmain.so">
+			<Abi>arm64-v8a</Abi>
+		</AndroidNativeLibrary>
+		<!-- repeat for other ABIs you support -->
+	</ItemGroup>
 	
 </Project>

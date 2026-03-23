@@ -39,6 +39,10 @@
             <pullToRefresh:SfPullToRefresh.PullableContent>
                 <ScrollView>
                     <VerticalStackLayout Spacing="{StaticResource LayoutSpacing}" Padding="{StaticResource LayoutPadding}">
+                        <Button x:Name="StartSDLBtn" Text="Start SDL"
+                            Clicked="OnStartSDLClicked"
+                            HorizontalOptions="Fill" />
+                            
                         <controls:CategoryChart />
                         <Label Text="Projects" Style="{StaticResource Title2}"/>
                         <ScrollView Orientation="Horizontal" Margin="-30,0">

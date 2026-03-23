@@ -1,4 +1,4 @@
-package com.companyname.mauiaapp;
+package com.companyname.mobile;
 
 import org.libsdl.app.SDLActivity;
 import android.content.Intent;

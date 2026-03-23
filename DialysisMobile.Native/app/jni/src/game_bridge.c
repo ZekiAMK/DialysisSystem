@@ -22,7 +22,7 @@ int SDL_main(int argc, char* argv[]) {
     LOGD("SDL_main entered");
 
     // argv[1] should be the WAD path passed via Intent extras
-    const char* wadPath = argc > 1 ? argv[1] : "/data/data/com.companyname.mauiaapp/files/doom1.wad";
+    const char* wadPath = argc > 1 ? argv[1] : "/data/data/com.companyname.mobile/files/doom1.wad";
 
     FILE* f = fopen(wadPath, "rb");
     if (!f) {
